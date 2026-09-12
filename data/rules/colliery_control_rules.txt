@@ -1,0 +1,81 @@
+DOCUMENT TYPE: DEMONSTRATION DATA
+DOCUMENT NAME: Colliery Control Rules
+STATUS: Synthetic content for chatbot development
+IMPORTANT: This is NOT the official text of Indian rules. It is only sample data for testing the chatbot.
+
+TITLE
+Colliery Control Rules - Demonstration Document
+
+PURPOSE
+This document describes example controls associated with the operation and management of a colliery.
+
+SCOPE
+The demonstration rules cover:
+- mine records
+- production information
+- coal dispatch
+- weighing
+- reporting
+- operational supervision
+
+COLLIERY
+A colliery is a mining operation associated with the extraction and handling of coal.
+
+MINE RECORDS
+Mine operators should maintain accurate records relating to mining activities.
+
+Records may include:
+- production
+- dispatch
+- stock
+- workforce
+- equipment
+- inspections
+
+PRODUCTION RECORDS
+Information about coal production should be recorded accurately.
+
+Production records may be used to monitor mine operations and prepare required reports.
+
+COAL DISPATCH
+Coal dispatched from a mine should be properly recorded.
+
+Dispatch information may include:
+- quantity
+- date
+- destination
+- transport information
+
+WEIGHING
+Coal quantities should be measured using suitable weighing arrangements.
+
+Weighing records should be maintained where required.
+
+STOCK
+Coal stocks should be monitored periodically.
+
+Differences between recorded and physical stock may require investigation.
+
+REPORTING
+Mine operators may be required to submit operational information to relevant authorities.
+
+Reports should be accurate and submitted through the applicable procedure.
+
+SUPERVISION
+Mining operations should have appropriate supervision.
+
+Supervisors should monitor operational activities and ensure that applicable procedures are followed.
+
+RECORD RETENTION
+Important operational records should be retained for the period required by the applicable rules.
+
+KEY TOPICS
+colliery
+coal production
+coal dispatch
+coal stock
+weighing
+mine records
+production records
+reporting
+mine supervision

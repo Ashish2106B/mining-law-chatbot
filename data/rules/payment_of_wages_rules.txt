@@ -1,0 +1,73 @@
+DOCUMENT TYPE: DEMONSTRATION DATA
+DOCUMENT NAME: Payment of Wages Rules
+STATUS: Synthetic content for chatbot development
+IMPORTANT: This is NOT the official text of Indian rules. It is only sample data for testing the chatbot.
+
+TITLE
+Payment of Wages Rules - Demonstration Document
+
+PURPOSE
+This demonstration document describes general concepts relating to payment of wages for workers.
+
+SCOPE
+The document covers:
+- wage records
+- payment procedures
+- deductions
+- wage statements
+- worker information
+- record maintenance
+
+WAGES
+Workers should receive wages according to the terms applicable to their employment.
+
+Employers should maintain accurate information concerning wages payable to workers.
+
+WAGE RECORDS
+Records may contain:
+- worker identification
+- attendance
+- wages earned
+- deductions
+- net payment
+- date of payment
+
+PAYMENT
+Wages should be paid using an appropriate and documented payment procedure.
+
+Employers should maintain evidence of payments where required.
+
+DEDUCTIONS
+Any deduction from wages should be made according to the applicable legal requirements.
+
+Examples of possible deductions may include deductions that are specifically permitted by applicable law.
+
+WAGE STATEMENTS
+Workers should receive appropriate information concerning wages and deductions where required.
+
+A wage statement may contain:
+- gross wages
+- deductions
+- net wages
+- payment date
+
+ATTENDANCE
+Attendance and working time information may be maintained for calculating wages.
+
+RECORD MAINTENANCE
+Employers should preserve wage-related records for the period required under the applicable rules.
+
+DISPUTES
+Workers who believe that their wages have not been correctly calculated or paid may use the applicable grievance or legal procedure.
+
+KEY TOPICS
+wages
+payment of wages
+worker wages
+salary
+deductions
+wage records
+attendance
+payment records
+wage statement
+worker dispute

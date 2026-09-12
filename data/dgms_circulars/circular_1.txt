@@ -1,0 +1,69 @@
+DOCUMENT TYPE: DEMONSTRATION DATA
+DOCUMENT NAME: DGMS Circular 1
+STATUS: Synthetic content for chatbot development
+IMPORTANT: This is NOT an actual DGMS circular. It is only sample data for testing the chatbot.
+
+TITLE
+DGMS Safety Circular - Demonstration Document
+
+SUBJECT
+Safety awareness and prevention of accidents in mining operations.
+
+PURPOSE
+This demonstration circular provides example safety guidance for mine operators and workers.
+
+SAFETY AWARENESS
+Mine management should regularly communicate important safety information to workers.
+
+Safety meetings may be conducted to discuss:
+- recent incidents
+- identified hazards
+- corrective actions
+- emergency procedures
+- safe working practices
+
+ACCIDENT PREVENTION
+Mine operators should identify hazards before work begins.
+
+Workers should report unsafe conditions to supervisors or the responsible authority.
+
+MACHINERY SAFETY
+Workers should not operate machinery unless they are appropriately trained and authorized.
+
+Machines should be inspected and maintained according to an appropriate maintenance schedule.
+
+PERSONAL PROTECTIVE EQUIPMENT
+Workers should use protective equipment appropriate to the hazards of their work.
+
+Examples include:
+- helmets
+- safety footwear
+- eye protection
+- hearing protection
+- respiratory protection
+
+EMERGENCY PREPAREDNESS
+Mines should maintain suitable emergency procedures.
+
+Emergency procedures should be communicated to workers and periodically reviewed.
+
+REPORTING
+Accidents, dangerous occurrences and unsafe conditions should be appropriately documented.
+
+LESSONS FROM ACCIDENTS
+Mine management should examine incidents to identify their causes and prevent similar incidents from occurring again.
+
+TRAINING
+Safety training should be provided to workers according to their duties and identified hazards.
+
+KEY TOPICS
+DGMS
+safety circular
+mine safety
+accident prevention
+machinery safety
+personal protective equipment
+PPE
+emergency preparedness
+safety training
+accident reporting

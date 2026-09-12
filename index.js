@@ -4,6 +4,8 @@ const readline = require("readline");
 
 const handleCommand = require("./src/commands");
 const loadDocuments = require("./src/documentLoader");
+const chunkDocuments = require("./src/chunkdocuments");
+const indexDocuments = require("./src/indexDocuments");
 const searchDocuments = require("./src/searchDocuments");
 const generateAnswer = require("./src/chatbot");
 
@@ -17,61 +19,98 @@ console.log("Type 'help' to see available commands.");
 console.log("Type 'exit' to quit.\n");
 
 
+// Load documents
 const documents = loadDocuments();
 
-console.log(`Loaded ${documents.length} documents.\n`);
+console.log(`Loaded ${documents.length} documents.`);
 
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// Create document chunks
+const chunks = chunkDocuments(documents);
+
+console.log(`Created ${chunks.length} document chunks.`);
 
 
-function askQuestion() {
+// Start chatbot
+async function start() {
 
-    rl.question("You: ", async(input) => {
+    console.log("\nCreating document embeddings...\n");
 
-        input = input.trim().toLowerCase();
+    // Create embeddings for all document chunks
+    await indexDocuments(chunks);
 
-        const isCommand = handleCommand(input);
-
-        if (isCommand) {
-            askQuestion();
-            return;
-        }
+    console.log("\nDocument indexing completed.\n");
 
 
-        const results = searchDocuments(input, documents);
+    // Create terminal interface
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
 
-        if (results.length === 0) {
 
-            console.log("\nNo relevant information found.\n");
+    // Ask user questions
+    function askQuestion() {
 
-        } else {
+        rl.question("You: ", async (input) => {
 
-            console.log("\nGenerating answer...\n");
+            input = input.trim();
+
+
+            // Check special commands
+            const isCommand = handleCommand(input.toLowerCase());
+
+            if (isCommand) {
+                askQuestion();
+                return;
+            }
+
 
             try {
 
-                const answer = await generateAnswer(input, results);
+                // Search relevant document chunks
+                const results = await searchDocuments(
+                    input,
+                    chunks
+                );
 
-                console.log("Bot:", answer);
-                console.log();
+
+                if (results.length === 0) {
+
+                    console.log("\nNo relevant information found.\n");
+
+                } else {
+
+                    console.log("\nGenerating answer...\n");
+
+
+                    // Generate answer using Gemini
+                    const answer = await generateAnswer(
+                        input,
+                        results
+                    );
+
+
+                    console.log("Bot:", answer);
+                    console.log();
+                }
 
             } catch (error) {
 
-                console.log("\nError generating answer.");
-                console.log(error.message);
+                console.log("\nError:", error.message);
                 console.log();
-
             }
-        }
 
 
-        askQuestion();
-    });
+            // Ask next question
+            askQuestion();
+        });
+    }
+
+
+    askQuestion();
 }
 
 
-askQuestion();
+// Run application
+start();

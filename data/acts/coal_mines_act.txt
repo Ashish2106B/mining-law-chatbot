@@ -1,2 +1,122 @@
-The Coal Mines Act contains provisions relating to
-the regulation and safety of coal mines and the welfare of workers.
+DOCUMENT TYPE: DEMONSTRATION DATA
+DOCUMENT NAME: Coal Mines Act
+STATUS: Synthetic content for chatbot development
+IMPORTANT: This is NOT the official text of an Indian Act. It is only sample data for testing the chatbot.
+
+TITLE
+Coal Mines Act - Demonstration Document
+
+PURPOSE
+This demonstration document describes general legal and regulatory concepts associated with the operation of coal mines.
+
+SCOPE
+The document covers:
+- coal mine operations
+- mine management
+- worker safety
+- health and welfare
+- mine inspections
+- accident reporting
+- emergency procedures
+- responsibilities of mine operators
+
+COAL MINE OPERATIONS
+Coal mining operations may include exploration, excavation, transportation, processing and storage of coal.
+
+Mining activities should be planned and conducted in a manner that considers worker safety and operational risks.
+
+MINE MANAGEMENT
+The mine management is responsible for establishing appropriate procedures for safe mining operations.
+
+Management should ensure that workers receive suitable instructions before performing hazardous activities.
+
+SAFETY MANAGEMENT
+A mine should have procedures for identifying and controlling workplace hazards.
+
+Safety management may include:
+- hazard identification
+- risk assessment
+- safety inspections
+- worker training
+- emergency planning
+- equipment maintenance
+- supervision of hazardous activities
+
+WORKER SAFETY
+Workers should be informed about hazards associated with their work.
+
+Workers should follow established safety procedures and use the protective equipment required for their activities.
+
+SUPERVISION
+Mining activities involving significant hazards should be appropriately supervised.
+
+Supervisors should ensure that workers understand applicable operating and safety procedures.
+
+MINE INSPECTIONS
+Mining areas and equipment should be periodically inspected.
+
+Inspections may identify:
+- unsafe working conditions
+- damaged equipment
+- inadequate ventilation
+- electrical hazards
+- structural hazards
+- other operational risks
+
+EMERGENCY MANAGEMENT
+Mine operators should maintain procedures for responding to emergencies.
+
+Possible emergencies include:
+- fire
+- explosion
+- flooding
+- roof or structural failure
+- equipment accidents
+- ventilation failure
+
+ACCIDENT REPORTING
+Significant accidents and dangerous occurrences should be recorded.
+
+Where applicable, relevant incidents should be reported to the appropriate authority according to the applicable legal requirements.
+
+WORKER WELFARE
+Mining operations should provide suitable welfare facilities.
+
+Examples include:
+- drinking water
+- sanitation
+- rest facilities
+- first-aid arrangements
+- suitable working conditions
+
+HEALTH
+Mine management should consider occupational health risks associated with mining activities.
+
+Potential hazards may include:
+- dust
+- excessive noise
+- vibration
+- heat
+- hazardous substances
+
+TRAINING
+Workers should receive appropriate training before performing activities that involve significant hazards.
+
+Training may include:
+- equipment operation
+- emergency procedures
+- personal protective equipment
+- workplace hazards
+- safe working procedures
+
+KEY TOPICS
+coal mines
+mine safety
+worker safety
+mine management
+mine inspection
+accident reporting
+emergency procedures
+worker welfare
+occupational health
+worker training

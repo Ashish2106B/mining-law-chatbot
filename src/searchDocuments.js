@@ -1,57 +1,31 @@
-function searchDocuments(query, documents) {
+const createEmbedding = require("./embeddings");
+const cosineSimilarity = require("./similarity");
 
-    const stopWords = [
-        "what",
-        "are",
-        "the",
-        "is",
-        "of",
-        "in",
-        "on",
-        "for",
-        "to",
-        "and",
-        "a",
-        "an",
-        "how",
-        "which",
-        "does",
-        "do"
-    ];
+async function searchDocuments(query, chunks) {
 
-    const words = query
-        .toLowerCase()
-        .replace(/[?.,!]/g, "")
-        .split(/\s+/)
-        .filter(word => word.length > 2 && !stopWords.includes(word));
+    // Create embedding for user's question
+    const queryEmbedding = await createEmbedding(query);
 
     const results = [];
 
-    for (const document of documents) {
+    for (const chunk of chunks) {
 
-        const content = document.content.toLowerCase();
+        const similarity = cosineSimilarity(
+            queryEmbedding,
+            chunk.embedding
+        );
 
-        let score = 0;
-
-        for (const word of words) {
-
-            if (content.includes(word)) {
-                score++;
-            }
-        }
-
-        if (score > 0) {
-
-            results.push({
-                document: document,
-                score: score
-            });
-        }
+        results.push({
+            chunk: chunk,
+            score: similarity
+        });
     }
 
+    // Highest similarity first
     results.sort((a, b) => b.score - a.score);
 
-    return results;
+    // Return top 5 results
+    return results.slice(0, 5);
 }
 
 module.exports = searchDocuments;

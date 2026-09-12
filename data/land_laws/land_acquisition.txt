@@ -1,0 +1,69 @@
+DOCUMENT TYPE: DEMONSTRATION DATA
+DOCUMENT NAME: Land Acquisition
+STATUS: Synthetic content for chatbot development
+IMPORTANT: This is NOT the official text of Indian land acquisition law. It is only sample data for testing the chatbot.
+
+TITLE
+Land Acquisition - Demonstration Document
+
+PURPOSE
+This demonstration document describes general concepts associated with acquisition of private land for public or development purposes.
+
+SCOPE
+The document covers:
+- acquisition process
+- notices
+- affected persons
+- land records
+- compensation
+- objections
+- possession
+- rehabilitation
+
+LAND IDENTIFICATION
+The acquisition process begins with identification of land required for the proposed purpose.
+
+LAND RECORDS
+Relevant land records should be examined to identify owners and persons having interests in the land.
+
+NOTICE
+Affected persons may receive notices according to the applicable legal procedure.
+
+OBJECTIONS
+Where the applicable law provides an opportunity for objections, affected persons may submit objections within the prescribed process.
+
+ASSESSMENT
+The acquiring authority may assess the land and interests affected by the proposed acquisition.
+
+COMPENSATION
+Compensation may be determined according to the applicable legal framework.
+
+Factors relevant to compensation depend on the applicable legislation and circumstances.
+
+AWARD
+The competent authority may determine the compensation payable through the prescribed procedure.
+
+POSSESSION
+Possession of acquired land should be taken according to the applicable legal requirements.
+
+AFFECTED FAMILIES
+Acquisition may affect landowners, tenants, workers and other persons depending on their relationship with the land.
+
+REHABILITATION AND RESETTLEMENT
+Where applicable, affected persons may be entitled to rehabilitation or resettlement measures.
+
+DOCUMENTATION
+Authorities and affected persons should maintain relevant documents relating to ownership, notices, compensation and other acquisition proceedings.
+
+KEY TOPICS
+land acquisition
+landowner
+affected person
+land records
+notice
+objection
+compensation
+award
+possession
+rehabilitation
+resettlement

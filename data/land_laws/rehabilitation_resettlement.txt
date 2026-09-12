@@ -1,0 +1,74 @@
+DOCUMENT TYPE: DEMONSTRATION DATA
+DOCUMENT NAME: Rehabilitation and Resettlement
+STATUS: Synthetic content for chatbot development
+IMPORTANT: This is NOT the official text of Indian rehabilitation and resettlement law. It is only sample data for testing the chatbot.
+
+TITLE
+Rehabilitation and Resettlement - Demonstration Document
+
+PURPOSE
+This document describes general concepts associated with rehabilitation and resettlement of persons affected by land acquisition or development projects.
+
+SCOPE
+The document covers:
+- affected families
+- displacement
+- rehabilitation
+- resettlement
+- livelihood support
+- housing
+- community facilities
+- consultation
+
+AFFECTED FAMILIES
+An affected family may include persons whose land, residence, livelihood or other interests are affected by a development or acquisition process.
+
+DISPLACEMENT
+Displacement may occur when affected persons are required to move because of a project.
+
+REHABILITATION
+Rehabilitation aims to help affected persons restore or improve their living conditions and livelihoods.
+
+RESETTLEMENT
+Resettlement involves arrangements for relocating affected persons where relocation is required.
+
+LIVELIHOOD
+Where applicable, rehabilitation measures may address the loss of livelihood caused by acquisition or displacement.
+
+HOUSING
+Where the applicable framework provides housing assistance or other housing-related benefits, these should be implemented according to the prescribed procedure.
+
+COMMUNITY FACILITIES
+Resettlement planning may consider access to:
+- roads
+- drinking water
+- sanitation
+- education
+- healthcare
+- electricity
+- community facilities
+
+CONSULTATION
+Affected persons may be consulted during the planning and implementation of rehabilitation and resettlement measures where required.
+
+GRIEVANCE REDRESSAL
+Affected persons should have access to the grievance mechanism provided under the applicable legal framework.
+
+DOCUMENTATION
+Records should be maintained concerning affected persons, rehabilitation measures, payments and resettlement arrangements.
+
+MONITORING
+Implementation of rehabilitation and resettlement measures should be monitored to identify delays or unresolved issues.
+
+KEY TOPICS
+rehabilitation
+resettlement
+R&R
+affected family
+displacement
+livelihood
+housing
+community facilities
+consultation
+grievance
+land acquisition

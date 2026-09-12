@@ -9,10 +9,12 @@ async function generateAnswer(question, results) {
     const context = results
         .map(result => {
             return `
-Source: ${result.document.name}
-Category: ${result.document.category}
+Source: ${result.chunk.documentName}
+Category: ${result.chunk.category}
+Similarity Score: ${result.score.toFixed(4)}
 
-${result.document.content}
+Relevant Information:
+${result.chunk.text}
 `;
         })
         .join("\n\n");
@@ -20,22 +22,32 @@ ${result.document.content}
     const prompt = `
 You are a Mining Laws assistant.
 
-Answer the user's question using ONLY the information provided
-in the legal documents below.
+Answer the user's question using ONLY the information
+provided in the retrieved legal document sections.
 
-Do not invent laws, rules, sections, penalties, dates, or other
-legal information.
+The retrieved sections were selected based on semantic
+similarity to the user's question.
 
-If the provided documents do not contain enough information to
-answer the question, clearly say that the available documents
+Do not invent laws, rules, sections, penalties, dates,
+or other legal information.
+
+If the retrieved information is not sufficient to answer
+the question, clearly say that the available documents
 do not contain sufficient information.
 
-Keep the answer clear and easy to understand.
+If the question is broad, provide a general answer based
+on the available retrieved information.
+
+Do not assume that the user is asking about a particular
+Act or Rule unless the retrieved information supports it.
+
+At the end, mention the source document names used for
+the answer.
 
 User Question:
 ${question}
 
-Legal Documents:
+Retrieved Legal Information:
 ${context}
 `;
 

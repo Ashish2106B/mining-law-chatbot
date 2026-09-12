@@ -1,2 +1,95 @@
-The Coal Mines Regulations contain regulations relating to
-safety, health, working conditions and operations in coal mines.
+DOCUMENT TYPE: DEMONSTRATION DATA
+DOCUMENT NAME: Coal Mines Regulations
+STATUS: Synthetic content for chatbot development
+IMPORTANT: This is NOT the official text of Indian mining regulations. It is only sample data for testing the chatbot.
+
+TITLE
+Coal Mines Regulations - Demonstration Document
+
+PURPOSE
+This demonstration document describes example technical and safety requirements for coal mining operations.
+
+SCOPE
+The regulations cover:
+- mine ventilation
+- underground operations
+- machinery
+- electrical safety
+- roof support
+- worker protection
+- emergency procedures
+- inspections
+
+VENTILATION
+Adequate ventilation is important in underground mining.
+
+Ventilation systems may be used to:
+- provide fresh air
+- control harmful gases
+- control dust
+- regulate environmental conditions
+
+GASES
+Mining operations may encounter hazardous gases.
+
+Gas monitoring and appropriate safety procedures should be used where gas hazards may exist.
+
+DUST CONTROL
+Coal dust can create occupational and operational hazards.
+
+Measures for controlling dust may include:
+- water spraying
+- ventilation
+- dust monitoring
+- suitable respiratory protection
+
+ROOF AND GROUND CONTROL
+Underground mine workings should be maintained to reduce the risk of ground or roof failure.
+
+Suitable support systems should be used according to the conditions of the mine.
+
+MACHINERY
+Mining machinery should be operated and maintained according to appropriate safety procedures.
+
+Workers operating machinery should receive suitable training.
+
+ELECTRICAL SAFETY
+Electrical equipment used in mining should be appropriately maintained.
+
+Electrical hazards may include:
+- electric shock
+- short circuits
+- damaged cables
+- faulty equipment
+
+WORKER PROTECTION
+Workers should use appropriate protective equipment for the hazards associated with their work.
+
+EMERGENCY PROCEDURES
+Emergency plans should cover foreseeable mining emergencies.
+
+Emergency arrangements may include:
+- communication systems
+- evacuation procedures
+- first aid
+- emergency equipment
+- rescue arrangements
+
+INSPECTIONS
+Mine workings, equipment and safety systems should be inspected periodically.
+
+Defects identified during inspections should be addressed through an appropriate corrective process.
+
+KEY TOPICS
+coal mines regulations
+mine ventilation
+underground mining
+hazardous gases
+coal dust
+roof support
+ground control
+mining machinery
+electrical safety
+worker protection
+emergency procedures
+mine inspections
