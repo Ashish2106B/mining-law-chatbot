@@ -1,63 +1,160 @@
-Mining Acts, Rules & Regulations Chatbot
+# Mining Acts, Rules & Regulations Chatbot
 
-A terminal-based AI chatbot designed to answer questions related to Acts, Rules, Regulations, DGMS circulars, and land-related laws applicable to the mining industry.
+A terminal-based AI chatbot designed to answer natural-language queries related to Acts, Rules, Regulations, DGMS Circulars, and land-related laws applicable to the mining industry.
 
-Problem Statement
+> **Note:** The current dataset contains synthetic/demo content created for development and testing. It is not official legal text and should not be used as legal advice.
 
-Chatbot to respond to text queries pertaining to various Acts, Rules, and Regulations applicable to Mining industries.
+## Problem Statement
 
-The proposed system aims to help mining-industry stakeholders retrieve and understand relevant information from a collection of mining-related legal and regulatory documents.
+The mining industry is governed by a large number of Acts, Rules, Regulations, DGMS Circulars, and land-related provisions. Finding relevant information from these documents manually can be time-consuming.
 
-Current Objective
+This project aims to provide a conversational interface where users can ask natural-language questions and receive answers based on the available mining-related documents.
 
-The current version focuses on building the core Retrieval-Augmented Generation (RAG) pipeline.
+## Objectives
 
-The system can now:
+- Provide a simple terminal-based interface for mining-law queries.
+- Organize mining-related documents into meaningful topic-based chunks.
+- Retrieve relevant information from the local knowledge base.
+- Use Google Gemini to generate natural-language answers.
+- Provide source document information with responses.
+- Reduce the amount of irrelevant information passed to the AI model.
+- Prevent the model from generating unsupported legal information.
+- Build an architecture that can later support a larger official legal dataset.
 
-Run as a terminal application
-Accept natural-language questions
-Load mining documents from .txt files
-Split documents into smaller chunks
-Generate embeddings for document chunks using Gemini
-Generate an embedding for the user's question
-Compare question and document embeddings
-Retrieve semantically relevant document chunks
-Pass retrieved information to Gemini
-Generate a natural-language answer
+## Current Features
+
+### Terminal Interface
+
+The chatbot runs directly in the terminal and allows users to ask questions interactively.
+
+Example:
+
+```text
+You: What are the safety requirements in coal mines?
+
+Bot: ...
+Document Loading
+
+The application automatically loads .txt files from the data directory.
+
+Current categories:
+
+Acts
+Rules
+Regulations
+DGMS Circulars
+Land Laws
+Predefined Topic-Based Chunks
+
+Documents are divided into meaningful predefined topics using markers such as:
+
+[TOPIC: Worker Safety]
+
+Workers should receive appropriate safety instructions...
+
+
+[TOPIC: Mine Inspections]
+
+Regular inspections are important...
+
+Each topic is converted into a separate knowledge chunk.
+
+The current development dataset contains:
+
+9 documents
+87 predefined chunks
+Local Retrieval
+
+When a user asks a question, the application searches the predefined chunks and ranks relevant information based on:
+
+Query words
+Topic names
+Document names
+Chunk content
+
+The most relevant chunks are then passed to Gemini.
+
+Gemini Answer Generation
+
+Google Gemini generates the final response using the retrieved information.
+
+The model is instructed to:
+
+Use only the retrieved information.
+Avoid inventing laws.
+Avoid inventing sections, penalties, or dates.
+State when the available information is insufficient.
+Mention the source documents used.
+Terminal Commands
+
+The chatbot currently supports:
+
+help
+clear
+exit
+Architecture
+                    TXT Documents
+                         |
+                         v
+                documentLoader.js
+                         |
+                         v
+                chunkDocuments.js
+                         |
+                         v
+               Predefined Chunks
+                         |
+                         v
+                  User Question
+                         |
+                         v
+                searchDocuments.js
+                         |
+                         v
+                Relevant Chunks
+                         |
+                         v
+                   chatbot.js
+                         |
+                         v
+                  Google Gemini
+                         |
+                         v
+                    Final Answer
 Project Structure
 mining_law_chatbot/
-│
+|
 ├── index.js
 ├── package.json
+├── package-lock.json
 ├── .env
 ├── .gitignore
 ├── README.md
-│
+|
 ├── src/
 │   ├── chatbot.js
 │   ├── documentLoader.js
 │   ├── chunkDocuments.js
-│   ├── embeddings.js
-│   ├── indexDocuments.js
 │   ├── searchDocuments.js
-│   ├── similarity.js
+│   ├── conversation.js
 │   └── commands.js
-│
+|
 └── data/
+    |
     ├── acts/
     │   ├── coal_mines_act.txt
     │   └── explosives_act.txt
-    │
+    |
     ├── rules/
     │   ├── colliery_control_rules.txt
     │   └── payment_of_wages_rules.txt
-    │
+    |
     ├── regulations/
     │   └── coal_mines_regulations.txt
-    │
+    |
     ├── dgms_circulars/
     │   └── circular_1.txt
-    │
+    |
     └── land_laws/
         ├── cba.txt
         ├── land_acquisition.txt
@@ -65,242 +162,66 @@ mining_law_chatbot/
 File Responsibilities
 index.js
 
-The main entry point of the application.
+Main entry point of the application.
 
-It:
+Responsibilities:
 
-Loads environment variables.
-Loads documents.
-Splits documents into chunks.
-Generates embeddings for the chunks.
-Starts the terminal interface.
-Accepts user questions.
-Performs semantic search.
-Sends retrieved information to Gemini.
-Displays the generated answer.
-commands.js
+Load environment variables.
+Load documents.
+Create predefined chunks.
+Start the terminal interface.
+Receive user queries.
+Retrieve relevant information.
+Generate answers.
+src/documentLoader.js
 
-Handles special terminal commands.
+Loads .txt files from the data directory and identifies their categories based on their folder.
 
-Currently supported:
+Example:
+
+data/acts/coal_mines_act.txt
+
+is loaded with:
+
+category: acts
+name: coal_mines_act.txt
+src/chunkDocuments.js
+
+Parses the [TOPIC: ...] markers in each document and converts them into structured knowledge chunks.
+
+Example:
+
+{
+    id: "coal_mines_act.txt-7",
+    documentName: "coal_mines_act.txt",
+    category: "acts",
+    topic: "Worker Safety",
+    text: "Workers should receive appropriate safety instructions..."
+}
+src/searchDocuments.js
+
+Searches the predefined knowledge chunks and ranks them according to their relevance to the user's query.
+
+src/chatbot.js
+
+Handles communication with Google Gemini.
+
+It receives the user's question along with the retrieved knowledge and generates the final answer.
+
+src/conversation.js
+
+Handles simple conversational messages such as greetings, acknowledgements, and thanks.
+
+src/commands.js
+
+Handles terminal commands such as:
 
 help
 clear
 exit
-
-Example:
-
-You: help
-
-Displays the available commands.
-
-documentLoader.js
-
-Loads .txt documents from the data/ directory.
-
-Each document is stored with:
-
-{
-    category: "...",
-    name: "...",
-    content: "..."
-}
-
-For example:
-
-{
-    category: "acts",
-    name: "coal_mines_act.txt",
-    content: "..."
-}
-Document Chunking
-chunkDocuments.js
-
-Large documents should not always be treated as one single piece of text.
-
-This module divides documents into smaller sections or chunks.
-
-The current implementation primarily splits documents based on paragraphs.
-
-For example:
-
-Coal Mines Act
-
-Paragraph 1
-        ↓
-Chunk 1
-
-Paragraph 2
-        ↓
-Chunk 2
-
-Paragraph 3
-        ↓
-Chunk 3
-
-Each chunk contains information about its original document.
-
-Example:
-
-{
-    id: "coal_mines_act.txt-0",
-    documentName: "coal_mines_act.txt",
-    category: "acts",
-    text: "..."
-}
-Gemini Embeddings
-embeddings.js
-
-This module communicates with the Gemini API to convert text into an embedding vector.
-
-An embedding represents the semantic meaning of text numerically.
-
-For example:
-
-"What safety measures are required?"
-
-and:
-
-"Procedures for protecting workers from mining hazards..."
-
-may have similar embeddings even though they don't contain exactly the same words.
-
-This allows the chatbot to search based on meaning rather than simple keyword matching.
-
-Document Indexing
-indexDocuments.js
-
-This module generates embeddings for every document chunk.
-
-The process is:
-
-Document Chunk
-      ↓
-Gemini Embedding Model
-      ↓
-Embedding Vector
-      ↓
-Stored with Chunk
-
-Each chunk eventually contains:
-
-{
-    id: "...",
-    documentName: "...",
-    category: "...",
-    text: "...",
-    embedding: [...]
-}
-Semantic Search
-searchDocuments.js
-
-This is the retrieval component.
-
-Instead of manually checking whether words such as:
-
-mine
-mines
-safety
-rules
-act
-
-appear in a document, the system now compares the meaning of the user's question with the meaning of document chunks.
-
-The process is:
-
-User Question
-      ↓
-Create Question Embedding
-      ↓
-Compare with Document Embeddings
-      ↓
-Calculate Similarity
-      ↓
-Rank Chunks
-      ↓
-Return Top Relevant Chunks
-
-The current implementation returns the top 5 most similar chunks.
-
-Similarity Calculation
-similarity.js
-
-This module calculates cosine similarity between two embedding vectors.
-
-Conceptually:
-
-Question Vector
-       ↓
-       ↕
-Similarity
-       ↕
-       ↓
-Document Vector
-
-A higher similarity score means the two pieces of text are more semantically related.
-
-The results are sorted from highest similarity to lowest similarity.
-
-Gemini Answer Generation
-chatbot.js
-
-This is the AI response-generation layer.
-
-It receives:
-
-User Question
-+
-Retrieved Document Chunks
-
-and sends them to Gemini.
-
-Gemini is instructed to:
-
-Use the retrieved information
-Answer the user's question
-Avoid inventing legal information
-Say when the available information is insufficient
-Give a clear and understandable response
-Mention the source documents
-
-The basic process is:
-
-User Question
-      +
-Relevant Chunks
-      ↓
-Gemini
-      ↓
-Natural Language Answer
-Current RAG Architecture
-
-The current system now follows this architecture:
-
-                 USER
-                   │
-                   ▼
-             User Question
-                   │
-                   ▼
-          Question Embedding
-                   │
-                   ▼
-        Semantic Similarity Search
-                   │
-                   ▼
-          Relevant Text Chunks
-                   │
-                   ▼
-             Gemini 2.5 Flash
-                   │
-                   ▼
-            Generated Answer
-                   │
-                   ▼
-                 USER
 Knowledge Base
 
-The current demonstration knowledge base contains 9 documents.
+The current development knowledge base contains the following documents.
 
 Acts
 coal_mines_act.txt
@@ -312,205 +233,213 @@ Regulations
 coal_mines_regulations.txt
 DGMS Circulars
 circular_1.txt
-Land-related Laws
+Land Laws
 cba.txt
 land_acquisition.txt
 rehabilitation_resettlement.txt
-Important Dataset Note
+Example Topics
 
-The current .txt files contain synthetic demonstration content created for testing the chatbot architecture.
+The knowledge base is organized into topics such as:
 
-They are not official copies of Indian Acts, Rules, Regulations, or DGMS circulars.
-
-They should therefore not be used as a legal source.
-
-For the final project, these files should be replaced with verified documents obtained from appropriate official sources.
-
+Coal Mine Operations
+Mine Management
+Worker Safety
+Mine Inspections
+Accident Reporting
+Emergency Management
+Worker Welfare
+Ventilation
+Gas Monitoring
+Dust Control
+Machinery Safety
+Electrical Safety
+Explosives
+Blasting
+Land Acquisition
+Compensation
+Rehabilitation
+Resettlement
+Livelihood Support
+Example Queries
+tell me about coal mines
+tell me about the coal mines act
+what are the rules about explosives?
+what are the safety requirements?
+how is land acquired?
+what is rehabilitation?
 Technologies Used
 Node.js
 JavaScript
-Gemini API
+Google Gemini API
 @google/genai
 dotenv
-readline
-fs
-path
-Environment Variables
+Local TXT-based knowledge base
+Installation
+1. Clone the repository
+git clone <repository-url>
+2. Navigate to the project
+cd mining_law_chatbot
+3. Install dependencies
+npm install
+4. Configure Gemini API
 
-The Gemini API key is stored in .env.
+Create a .env file in the project root:
 
 GEMINI_API_KEY=your_api_key_here
 
-The .env file should not be committed to GitHub.
+Do not commit the .env file to GitHub.
 
-.gitignore should contain:
-
-node_modules/
-.env
-Installation
-
-Install the required packages:
-
-npm install @google/genai dotenv
 Running the Application
 
 Start the chatbot using:
 
 node index.js
 
-The application first loads and indexes the documents.
+Expected startup:
 
-Example:
+==========================================
+  MINING ACTS, RULES & REGULATIONS CHATBOT
+==========================================
+
+Welcome to the Mining Law Chatbot!
 
 Loaded 9 documents.
-Created X document chunks.
+Created 87 predefined chunks.
 
-Creating document embeddings...
-
-Document indexing completed.
+Knowledge base ready.
 
 You:
-Example Queries
+Why Predefined Chunks?
 
-The chatbot can currently be tested with questions such as:
+The current project assumes that the legal knowledge base is relatively stable and is updated infrequently.
 
-What are the safety requirements?
-How should explosives be handled?
-What is mine ventilation?
-How are wages recorded?
-What happens during land acquisition?
-What is rehabilitation and resettlement?
-Tell me about coal mines.
+Because of this, the project currently uses predefined topic-based chunks instead of generating embeddings for the entire dataset.
+
+This provides:
+
+Faster startup
+Lower API usage
+Simple implementation
+Easy debugging
+Predictable retrieval
+Clear organization of legal information
+
+For example:
+
+Coal Mines Act
+|
+├── Purpose and Scope
+├── Coal Mine Operations
+├── Mine Management
+├── Worker Safety
+├── Mine Inspections
+├── Accident Reporting
+├── Emergency Management
+├── Worker Health and Welfare
+└── Worker Training
+
+If the dataset becomes significantly larger or more dynamic in the future, semantic embeddings and a vector database can be introduced.
+
+Safety and Reliability
+
+The chatbot is designed to reduce unsupported answers by providing Gemini with only retrieved information.
+
+The model is instructed not to invent:
+
+Legal sections
+Rules
+Regulations
+Penalties
+Dates
+Requirements
+Other unsupported legal information
+
+If the knowledge base does not contain enough information, the chatbot should indicate that the available documents are insufficient.
+
+The system is currently a development prototype and should not be treated as a source of legal advice.
+
 Current Limitations
+The current dataset is synthetic/demo content.
+Retrieval currently uses keyword and metadata matching.
+The system does not yet provide precise legal section citations.
+The system does not yet use a vector database.
+The knowledge base currently uses .txt files.
+Query intent and document exclusion handling are still being improved.
+Legal documents have not yet been replaced with verified official sources.
+Future Improvements
+Knowledge Base
+Replace synthetic content with verified official mining-law documents.
+Add more Acts, Rules, Regulations, and DGMS documents.
+Add actual legal sections and subsections.
+Improve topic boundaries.
+Retrieval
+Improve natural-language query understanding.
+Support document inclusion and exclusion.
+Improve ranking of relevant chunks.
+Add relevance thresholds.
+Support multi-topic questions.
+Introduce semantic retrieval if required.
+Answer Generation
+Improve source attribution.
+Provide section-level references.
+Improve handling of insufficient information.
+Add better legal-document context.
+Performance
+Optimize retrieval for larger datasets.
+Introduce embeddings if the dataset grows substantially.
+Consider a vector database for large-scale deployment.
+User Experience
+Improve conversational responses.
+Add better error handling.
+Improve terminal formatting.
+Add query history if required.
+Development Roadmap
+[✓] Terminal interface
+        |
+[✓] Command handling
+        |
+[✓] Document loading
+        |
+[✓] Initial document chunking
+        |
+[✓] Predefined topic-based chunks
+        |
+[✓] Basic retrieval
+        |
+[✓] Gemini answer generation
+        |
+[ ] Conversational query handling
+        |
+[ ] Query intent understanding
+        |
+[ ] Document inclusion/exclusion
+        |
+[ ] Improved relevance scoring
+        |
+[ ] Source/section citations
+        |
+[ ] Verified official legal dataset
+        |
+[ ] Advanced semantic retrieval
+        |
+[ ] Production-ready system
+Environment and Security
 
-Although the basic RAG pipeline is now working, several improvements are still required.
+The Gemini API key must be stored in .env:
 
-1. Embeddings are regenerated
+GEMINI_API_KEY=your_api_key_here
 
-Currently, embeddings are generated every time the application starts.
+The .gitignore file should contain:
 
-node index.js
-     ↓
-Generate embeddings again
+node_modules/
+.env
 
-This should eventually be changed to:
+Never upload API keys or other credentials to GitHub.
 
-First run
-Documents → Embeddings → Save
+Disclaimer
 
-Next run
-Documents → Load saved embeddings
-2. Local storage instead of a vector database
+This project is an educational and development prototype.
 
-The current prototype keeps embeddings in memory.
+The current knowledge base contains synthetic information and does not represent official Indian mining legislation.
 
-A future version can use a proper vector database or local vector index.
-
-3. Chunking can be improved
-
-The current chunking approach primarily uses paragraphs.
-
-Legal documents have structures such as:
-
-Chapter
-Section
-Sub-section
-Rule
-Clause
-Schedule
-
-Future versions should preserve this structure when creating chunks.
-
-4. Source citations need improvement
-
-The chatbot currently receives the source filename, but a production system should provide more precise references such as:
-
-Source:
-Coal Mines Regulations
-Section 45
-Page 23
-
-where such information is available.
-
-5. Official legal documents are required
-
-The current demonstration data must eventually be replaced with verified legal documents.
-
-Development Status
-Feature	Status
-Terminal Interface	✅
-User Input	✅
-Command Handling	✅
-Document Loading	✅
-Keyword Search	🔄 Replaced by semantic search
-Manual Relevance Scoring	🔄 Replaced
-Document Chunking	✅
-Gemini Embeddings	✅
-Question Embedding	✅
-Cosine Similarity	✅
-Semantic Document Retrieval	✅
-Top Relevant Chunk Retrieval	✅
-Gemini API Integration	✅
-AI Answer Generation	✅
-Source Document Information	✅
-
-START
-  ↓
-Start Terminal Application
-  ↓
-Load Documents
-  ↓
-Split Documents into Chunks
-  ↓
-Generate Gemini Embeddings
-  ↓
-Index Documents
-  ↓
-Wait for User Question
-  ↓
-Generate Question Embedding
-  ↓
-Semantic Similarity Search
-  ↓
-Rank Relevant Chunks
-  ↓
-Send Relevant Chunks + Question to Gemini
-  ↓
-Generate Answer
-  ↓
-Display Answer
-  ↓
-Wait for Next Question
-Future Development
-
-The next major improvements are:
-
-Save embeddings locally so they don't have to be regenerated every startup.
-Improve document chunking to understand legal sections and clauses.
-Improve retrieval by tuning the number of chunks and similarity threshold.
-Add accurate source references.
-Replace synthetic data with official legal documents.
-Add more Acts, Rules, Regulations, DGMS circulars and land-related documents.
-Add safeguards against unsupported legal answers.
-Evaluate retrieval and answer accuracy using a set of predefined questions.
-Project Goal
-
-The final goal is to create a reliable mining-law chatbot capable of answering natural-language questions using a verified collection of mining-related legal and regulatory documents.
-
-The intended final pipeline is:
-
-Natural Language Question
-          ↓
-Semantic Understanding
-          ↓
-Semantic Retrieval
-          ↓
-Relevant Legal Sections
-          ↓
-Gemini
-          ↓
-Grounded Answer
-          ↓
-Precise Source Citation
-
-The system should use the legal documents as the source of truth, while Gemini should primarily be responsible for understanding the retrieved information and presenting it clearly.
+Once official legal documents are integrated, all legal information should be verified against authoritative government sources before being relied upon for legal, regulatory, operational, or compliance decisions.
