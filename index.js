@@ -1,7 +1,11 @@
+require("dotenv").config();
+
 const readline = require("readline");
+
 const handleCommand = require("./src/commands");
 const loadDocuments = require("./src/documentLoader");
 const searchDocuments = require("./src/searchDocuments");
+const generateAnswer = require("./src/chatbot");
 
 console.log("==========================================");
 console.log("  MINING ACTS, RULES & REGULATIONS CHATBOT");
@@ -26,7 +30,7 @@ const rl = readline.createInterface({
 
 function askQuestion() {
 
-    rl.question("You: ", (input) => {
+    rl.question("You: ", async(input) => {
 
         input = input.trim().toLowerCase();
 
@@ -40,23 +44,28 @@ function askQuestion() {
 
         const results = searchDocuments(input, documents);
 
-
         if (results.length === 0) {
 
             console.log("\nNo relevant information found.\n");
 
         } else {
 
-            console.log("\nRelevant documents:");
+            console.log("\nGenerating answer...\n");
 
-            for (const result of results) {
+            try {
 
-                console.log(
-                    `- ${result.document.name} (${result.document.category})`
-                );
+                const answer = await generateAnswer(input, results);
+
+                console.log("Bot:", answer);
+                console.log();
+
+            } catch (error) {
+
+                console.log("\nError generating answer.");
+                console.log(error.message);
+                console.log();
+
             }
-
-            console.log();
         }
 
 
