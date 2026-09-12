@@ -1,74 +1,82 @@
-DOCUMENT TYPE: DEMONSTRATION DATA
-DOCUMENT NAME: Rehabilitation and Resettlement
-STATUS: Synthetic content for chatbot development
-IMPORTANT: This is NOT the official text of Indian rehabilitation and resettlement law. It is only sample data for testing the chatbot.
+[TOPIC: Purpose and Scope]
 
-TITLE
-Rehabilitation and Resettlement - Demonstration Document
+This demonstration document describes general concepts associated with rehabilitation and resettlement of persons affected by land acquisition and mining-related development.
 
-PURPOSE
-This document describes general concepts associated with rehabilitation and resettlement of persons affected by land acquisition or development projects.
+This is synthetic development content and is not an official legal text.
 
-SCOPE
-The document covers:
-- affected families
-- displacement
-- rehabilitation
-- resettlement
-- livelihood support
-- housing
-- community facilities
-- consultation
 
-AFFECTED FAMILIES
-An affected family may include persons whose land, residence, livelihood or other interests are affected by a development or acquisition process.
+[TOPIC: Affected Families]
 
-DISPLACEMENT
-Displacement may occur when affected persons are required to move because of a project.
+Affected families may include persons whose land, residence, livelihood, or other recognized interests are affected by a project.
 
-REHABILITATION
-Rehabilitation aims to help affected persons restore or improve their living conditions and livelihoods.
+The identification of affected families is an important part of rehabilitation and resettlement planning.
 
-RESETTLEMENT
-Resettlement involves arrangements for relocating affected persons where relocation is required.
 
-LIVELIHOOD
-Where applicable, rehabilitation measures may address the loss of livelihood caused by acquisition or displacement.
+[TOPIC: Displacement]
 
-HOUSING
-Where the applicable framework provides housing assistance or other housing-related benefits, these should be implemented according to the prescribed procedure.
+Project activities may result in displacement of people from their homes or places of livelihood.
 
-COMMUNITY FACILITIES
-Resettlement planning may consider access to:
-- roads
-- drinking water
-- sanitation
-- education
-- healthcare
-- electricity
-- community facilities
+Where displacement occurs, appropriate rehabilitation and resettlement measures should be considered according to applicable requirements.
 
-CONSULTATION
-Affected persons may be consulted during the planning and implementation of rehabilitation and resettlement measures where required.
 
-GRIEVANCE REDRESSAL
-Affected persons should have access to the grievance mechanism provided under the applicable legal framework.
+[TOPIC: Rehabilitation]
 
-DOCUMENTATION
-Records should be maintained concerning affected persons, rehabilitation measures, payments and resettlement arrangements.
+Rehabilitation measures are intended to help affected persons recover or improve their living conditions and livelihoods after project-related impacts.
 
-MONITORING
-Implementation of rehabilitation and resettlement measures should be monitored to identify delays or unresolved issues.
+Measures may depend on the nature and extent of the impact.
 
-KEY TOPICS
-rehabilitation
-resettlement
-R&R
-affected family
-displacement
-livelihood
-housing
-community facilities
-consultation
-grievance
-land acquisition
+
+[TOPIC: Resettlement]
+
+Resettlement may involve providing suitable arrangements for affected persons who need to relocate.
+
+Planning should consider housing, basic services, access, and other relevant needs.
+
+
+[TOPIC: Livelihood Support]
+
+Projects may affect the livelihoods of persons dependent on acquired land or local economic activities.
+
+Rehabilitation measures may include assistance intended to support restoration or development of livelihoods.
+
+
+[TOPIC: Housing]
+
+Where affected persons are required to relocate, appropriate housing arrangements may be considered.
+
+Resettlement planning should take into account access to basic services and suitable living conditions.
+
+
+[TOPIC: Community Facilities]
+
+Resettlement areas may require access to community facilities and basic services.
+
+These may include roads, water supply, sanitation, education, healthcare, and other necessary facilities.
+
+
+[TOPIC: Consultation]
+
+Affected persons should be provided appropriate opportunities to receive information and participate in consultation processes where required.
+
+Consultation can help identify concerns and improve rehabilitation and resettlement planning.
+
+
+[TOPIC: Grievance Handling]
+
+A grievance mechanism may be established so that affected persons can raise concerns regarding rehabilitation and resettlement.
+
+Complaints should be recorded and addressed through an appropriate process.
+
+
+[TOPIC: Monitoring]
+
+Rehabilitation and resettlement measures should be monitored to determine whether planned support is being provided.
+
+Monitoring may include progress of housing, livelihood support, infrastructure, and resolution of grievances.
+
+
+[TOPIC: Documentation]
+
+Records should be maintained regarding affected families, rehabilitation measures, resettlement arrangements, compensation, grievances, and monitoring activities.
+
+Proper documentation supports accountability and evaluation.

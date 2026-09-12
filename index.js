@@ -5,7 +5,6 @@ const readline = require("readline");
 const handleCommand = require("./src/commands");
 const loadDocuments = require("./src/documentLoader");
 const chunkDocuments = require("./src/chunkdocuments");
-const indexDocuments = require("./src/indexDocuments");
 const searchDocuments = require("./src/searchDocuments");
 const generateAnswer = require("./src/chatbot");
 
@@ -14,103 +13,86 @@ console.log("  MINING ACTS, RULES & REGULATIONS CHATBOT");
 console.log("==========================================");
 
 console.log("\nWelcome to the Mining Law Chatbot!");
-console.log("Ask questions related to mining Acts, Rules, and Regulations.");
+console.log(
+    "Ask questions related to mining Acts, Rules, and Regulations."
+);
 console.log("Type 'help' to see available commands.");
 console.log("Type 'exit' to quit.\n");
 
-
-// Load documents
 const documents = loadDocuments();
 
 console.log(`Loaded ${documents.length} documents.`);
 
-
-// Create document chunks
 const chunks = chunkDocuments(documents);
 
-console.log(`Created ${chunks.length} document chunks.`);
+console.log(`Created ${chunks.length} predefined chunks.`);
 
+console.log("\nKnowledge base ready.\n");
 
-// Start chatbot
-async function start() {
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-    console.log("\nCreating document embeddings...\n");
+function askQuestion() {
 
-    // Create embeddings for all document chunks
-    await indexDocuments(chunks);
+    rl.question("You: ", async (input) => {
 
-    console.log("\nDocument indexing completed.\n");
+        input = input.trim();
 
+        if (!input) {
+            askQuestion();
+            return;
+        }
 
-    // Create terminal interface
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
+        const isCommand = handleCommand(
+            input.toLowerCase()
+        );
 
+        if (isCommand) {
+            askQuestion();
+            return;
+        }
 
-    // Ask user questions
-    function askQuestion() {
+        try {
 
-        rl.question("You: ", async (input) => {
+            const results = searchDocuments(
+                input,
+                chunks
+            );
 
-            input = input.trim();
+            if (results.length === 0) {
 
-
-            // Check special commands
-            const isCommand = handleCommand(input.toLowerCase());
-
-            if (isCommand) {
-                askQuestion();
-                return;
-            }
-
-
-            try {
-
-                // Search relevant document chunks
-                const results = await searchDocuments(
-                    input,
-                    chunks
+                console.log(
+                    "\nNo relevant information found.\n"
                 );
 
+            } else {
 
-                if (results.length === 0) {
+                console.log("\nRelevant information found.");
+                console.log("Generating answer...\n");
 
-                    console.log("\nNo relevant information found.\n");
+                const answer = await generateAnswer(
+                    input,
+                    results
+                );
 
-                } else {
-
-                    console.log("\nGenerating answer...\n");
-
-
-                    // Generate answer using Gemini
-                    const answer = await generateAnswer(
-                        input,
-                        results
-                    );
-
-
-                    console.log("Bot:", answer);
-                    console.log();
-                }
-
-            } catch (error) {
-
-                console.log("\nError:", error.message);
+                console.log("Bot:", answer);
                 console.log();
             }
 
+        } catch (error) {
 
-            // Ask next question
-            askQuestion();
-        });
-    }
+            console.log(
+                "\nError:",
+                error.message
+            );
 
+            console.log();
+        }
 
-    askQuestion();
+        askQuestion();
+    });
 }
 
-
-// Run application
-start();
+askQuestion();

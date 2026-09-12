@@ -4,24 +4,27 @@ function chunkDocuments(documents) {
 
     for (const document of documents) {
 
-        const text = document.content;
+        const sections = document.content.split(
+            /\[TOPIC:\s*(.*?)\]\s*/g
+        );
 
-        // Split roughly by paragraphs
-        const paragraphs = text
-            .split(/\n\s*\n/)
-            .map(paragraph => paragraph.trim())
-            .filter(paragraph => paragraph.length > 0);
+        for (let i = 1; i < sections.length; i += 2) {
 
-        for (let i = 0; i < paragraphs.length; i++) {
+            const topic = sections[i].trim();
+
+            const text = sections[i + 1]
+                .trim();
+
+            if (!text) {
+                continue;
+            }
 
             chunks.push({
                 id: `${document.name}-${i}`,
-
                 documentName: document.name,
-
                 category: document.category,
-
-                text: paragraphs[i]
+                topic: topic,
+                text: text
             });
         }
     }

@@ -1,97 +1,76 @@
-DOCUMENT TYPE: DEMONSTRATION DATA
-DOCUMENT NAME: Explosives Act
-STATUS: Synthetic content for chatbot development
-IMPORTANT: This is NOT the official text of an Indian Act. It is only sample data for testing the chatbot.
+[TOPIC: Purpose and Scope]
 
-TITLE
-Explosives Act - Demonstration Document
+This demonstration document provides general information about the safe handling, storage, transportation, and use of explosives in mining operations.
 
-PURPOSE
-This demonstration document describes general concepts relating to the safe handling and management of explosives used in mining activities.
+It is intended only for development and testing of the mining law chatbot and is not an official legal text.
 
-SCOPE
-The document covers:
-- storage of explosives
-- transportation
-- handling
-- authorized use
-- safety procedures
-- records
-- emergency response
 
-EXPLOSIVES IN MINING
-Explosives may be used in mining operations for controlled blasting and excavation.
+[TOPIC: Authorized Handling]
 
-Because explosives present significant hazards, their use should be controlled through appropriate procedures.
+Explosives used in mining operations should be handled only by authorized and trained persons.
 
-AUTHORIZED HANDLING
-Only appropriately authorized and trained personnel should handle explosives.
+Personnel involved in explosive operations should understand applicable safety procedures and follow instructions issued by responsible mine management.
 
-Workers should understand the hazards associated with explosives before participating in blasting activities.
 
-STORAGE
-Explosives should be stored in designated and appropriately secured storage facilities.
+[TOPIC: Storage of Explosives]
 
-Storage arrangements should consider:
-- unauthorized access
-- fire risks
-- separation of incompatible materials
-- inventory control
-- security
+Explosives should be stored in designated and secure storage facilities.
 
-TRANSPORTATION
-Explosives should be transported using suitable procedures and equipment.
+Storage areas should be protected from unauthorized access and should be maintained in conditions appropriate for the safe storage of explosive materials.
 
-Transportation procedures should minimize the possibility of:
-- accidental ignition
-- unauthorized access
-- damage to explosive materials
-- loss of materials
+Records of explosives received, stored, and issued should be maintained.
 
-HANDLING
-Explosives should be handled carefully to prevent accidental ignition or damage.
 
-Personnel should follow established procedures for loading, unloading and transferring explosives.
+[TOPIC: Transportation]
 
-BLASTING OPERATIONS
-Blasting should be carried out according to an approved procedure.
+Explosives should be transported using appropriate methods and under controlled conditions.
 
-Before blasting, personnel should identify the danger zone and take measures to keep unauthorized persons away.
+Transportation should be carried out by authorized personnel and precautions should be taken to prevent accidental ignition, damage, or unauthorized access.
 
-WARNING PROCEDURES
-Appropriate warning procedures should be followed before blasting.
 
-Workers and other persons in affected areas should be informed when necessary.
+[TOPIC: Handling]
 
-MISFIRES
-A misfire is a blasting event in which an explosive charge does not function as intended.
+Explosives should be handled carefully to reduce the risk of accidental ignition or damage.
+
+Workers should follow established procedures when receiving, issuing, carrying, or preparing explosives for blasting operations.
+
+
+[TOPIC: Blasting Operations]
+
+Blasting operations should be planned and supervised by competent personnel.
+
+Before blasting, the area should be checked and appropriate precautions should be taken to protect workers, equipment, and surrounding areas.
+
+Warning procedures should be followed before a blast is carried out.
+
+
+[TOPIC: Warning and Evacuation]
+
+Workers and other persons who may be affected by blasting should be warned before blasting begins.
+
+The blasting area should be cleared and access should be controlled until the operation is completed and the area has been declared safe.
+
+
+[TOPIC: Misfires]
+
+A misfire is a blasting operation in which an explosive charge does not function as expected.
 
 Misfires should be treated as hazardous conditions.
 
-Personnel should follow an established misfire procedure and should not approach the affected area without appropriate authorization.
+Only authorized and competent personnel should investigate and manage a suspected misfire according to established safety procedures.
 
-RECORD KEEPING
-Records relating to the receipt, storage, issue and use of explosives should be maintained where required.
 
-EMERGENCY RESPONSE
-Emergency procedures should be available for incidents involving explosives.
+[TOPIC: Records]
 
-Possible emergencies include:
-- accidental ignition
-- fire
-- explosion
-- suspected misfire
-- loss of explosives
-- unauthorized access
+Records relating to explosives should be maintained.
 
-KEY TOPICS
-explosives
-mining explosives
-blasting
-explosive storage
-explosive transportation
-explosive handling
-misfire
-blasting safety
-emergency procedures
-records
+Records may include quantities received, quantities issued, quantities used, storage information, and details of relevant blasting operations.
+
+Accurate records help maintain accountability and improve safety.
+
+
+[TOPIC: Emergency Response]
+
+Mining operations using explosives should maintain procedures for responding to explosive-related emergencies.
+
+Workers should know how to report dangerous conditions and how to respond when an unexpected explosive incident occurs.

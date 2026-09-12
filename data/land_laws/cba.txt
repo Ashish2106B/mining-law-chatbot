@@ -1,66 +1,54 @@
-DOCUMENT TYPE: DEMONSTRATION DATA
-DOCUMENT NAME: CBA
-STATUS: Synthetic content for chatbot development
-IMPORTANT: This is NOT the official text of the Coal Bearing Areas legislation. It is only sample data for testing the chatbot.
+[TOPIC: Purpose and Scope]
 
-TITLE
-Coal Bearing Areas - Demonstration Document
+This demonstration document describes general concepts associated with acquisition of coal-bearing land for mining development.
 
-PURPOSE
-This document describes general concepts associated with acquisition and management of land containing coal resources.
+The content is synthetic and is intended only for development and testing of the mining law chatbot.
 
-SCOPE
-The document covers:
-- coal-bearing land
-- acquisition
-- landowners
-- government procedures
-- compensation concepts
-- possession
-- mining development
 
-COAL-BEARING AREAS
-Coal-bearing areas are areas containing coal resources that may be identified for development.
+[TOPIC: Acquisition of Land]
 
-LAND ACQUISITION
-Acquisition of land for coal-related development should follow the applicable legal process.
+Land containing coal resources may be acquired for mining development according to applicable legal procedures.
 
-The process may involve:
-- identification of land
-- notification
-- verification of ownership
-- assessment
-- compensation
-- possession
+The acquisition process should identify the land required for the proposed mining activity.
 
-LANDOWNERS
-Landowners and other affected persons may have rights and obligations under the applicable legal framework.
 
-OWNERSHIP RECORDS
-Land ownership and related information should be verified using appropriate records.
+[TOPIC: Land Ownership]
 
-COMPENSATION
-Where applicable, compensation may be payable to persons whose interests in land are acquired.
+Information about land ownership should be identified during the acquisition process.
 
-The amount and method of compensation depend on the applicable legislation and circumstances.
+Ownership records may be examined to determine persons or entities having rights or interests in the affected land.
 
-POSSESSION
-Possession of acquired land should take place according to the applicable legal procedure.
 
-REHABILITATION
-Where acquisition affects homes or livelihoods, rehabilitation and resettlement measures may be applicable under the relevant framework.
+[TOPIC: Land Records]
 
-MINING DEVELOPMENT
-Acquired land may be used for activities connected with coal mining and related infrastructure subject to applicable approvals.
+Accurate land records are important during land acquisition.
 
-KEY TOPICS
-coal bearing areas
-CBA
-coal land
-land acquisition
-landowner
-compensation
-possession
-coal mining land
-rehabilitation
-resettlement
+Relevant information may include land parcels, ownership details, area, location, and existing rights or interests.
+
+
+[TOPIC: Compensation]
+
+Persons whose land or recognized interests are affected may be entitled to compensation according to applicable requirements.
+
+The amount and process for compensation should be determined through the applicable legal procedure.
+
+
+[TOPIC: Possession]
+
+After completion of the required acquisition procedures, possession of acquired land may be taken according to applicable requirements.
+
+Proper documentation should be maintained throughout the process.
+
+
+[TOPIC: Mining Development]
+
+Acquired land may be used for activities associated with coal mining and related infrastructure.
+
+Land use should follow applicable requirements and approved mining plans.
+
+
+[TOPIC: Rehabilitation]
+
+Where acquisition results in displacement or other impacts on affected persons, rehabilitation and resettlement measures may be required according to applicable provisions.
+
+Affected persons should be provided information about applicable rehabilitation measures.

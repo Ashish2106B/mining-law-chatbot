@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 
 function loadDocuments() {
-
     const dataPath = path.join(__dirname, "../data");
 
     const documents = [];
@@ -27,7 +26,10 @@ function loadDocuments() {
 
             const filePath = path.join(categoryPath, file);
 
-            const content = fs.readFileSync(filePath, "utf-8");
+            const content = fs.readFileSync(
+                filePath,
+                "utf-8"
+            );
 
             documents.push({
                 category: category,

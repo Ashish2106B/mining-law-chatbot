@@ -1,95 +1,77 @@
-DOCUMENT TYPE: DEMONSTRATION DATA
-DOCUMENT NAME: Coal Mines Regulations
-STATUS: Synthetic content for chatbot development
-IMPORTANT: This is NOT the official text of Indian mining regulations. It is only sample data for testing the chatbot.
+[TOPIC: Purpose and Scope]
 
-TITLE
-Coal Mines Regulations - Demonstration Document
+This demonstration document describes general safety and operational requirements associated with coal mining.
 
-PURPOSE
-This demonstration document describes example technical and safety requirements for coal mining operations.
+Topics include ventilation, gas monitoring, dust control, ground control, machinery, electrical safety, worker protection, emergency procedures, and inspections.
 
-SCOPE
-The regulations cover:
-- mine ventilation
-- underground operations
-- machinery
-- electrical safety
-- roof support
-- worker protection
-- emergency procedures
-- inspections
+This is synthetic content prepared for chatbot development.
 
-VENTILATION
-Adequate ventilation is important in underground mining.
 
-Ventilation systems may be used to:
-- provide fresh air
-- control harmful gases
-- control dust
-- regulate environmental conditions
+[TOPIC: Ventilation]
 
-GASES
-Mining operations may encounter hazardous gases.
+Adequate ventilation is important for maintaining safe conditions in underground mining operations.
 
-Gas monitoring and appropriate safety procedures should be used where gas hazards may exist.
+Ventilation systems should provide sufficient airflow and help control harmful gases, heat, smoke, and airborne contaminants.
 
-DUST CONTROL
-Coal dust can create occupational and operational hazards.
 
-Measures for controlling dust may include:
-- water spraying
-- ventilation
-- dust monitoring
-- suitable respiratory protection
+[TOPIC: Gas Monitoring]
 
-ROOF AND GROUND CONTROL
-Underground mine workings should be maintained to reduce the risk of ground or roof failure.
+Mining operations should monitor gases that may create unsafe conditions.
 
-Suitable support systems should be used according to the conditions of the mine.
+Gas monitoring equipment should be maintained properly and workers should be trained to respond when dangerous gas levels are detected.
 
-MACHINERY
-Mining machinery should be operated and maintained according to appropriate safety procedures.
 
-Workers operating machinery should receive suitable training.
+[TOPIC: Dust Control]
 
-ELECTRICAL SAFETY
-Electrical equipment used in mining should be appropriately maintained.
+Mining operations should take measures to control dust generated during mining activities.
 
-Electrical hazards may include:
-- electric shock
-- short circuits
-- damaged cables
-- faulty equipment
+Dust control measures may include water application, ventilation, equipment controls, and other appropriate methods.
 
-WORKER PROTECTION
-Workers should use appropriate protective equipment for the hazards associated with their work.
 
-EMERGENCY PROCEDURES
-Emergency plans should cover foreseeable mining emergencies.
+[TOPIC: Ground Control]
 
-Emergency arrangements may include:
-- communication systems
-- evacuation procedures
-- first aid
-- emergency equipment
-- rescue arrangements
+Ground and roof conditions should be monitored to reduce the risk of falls of ground.
 
-INSPECTIONS
-Mine workings, equipment and safety systems should be inspected periodically.
+Appropriate support systems and inspection procedures should be used where required by mining conditions.
 
-Defects identified during inspections should be addressed through an appropriate corrective process.
 
-KEY TOPICS
-coal mines regulations
-mine ventilation
-underground mining
-hazardous gases
-coal dust
-roof support
-ground control
-mining machinery
-electrical safety
-worker protection
-emergency procedures
-mine inspections
+[TOPIC: Machinery Safety]
+
+Mining machinery should be operated and maintained using appropriate safety procedures.
+
+Workers operating machinery should receive appropriate training and should follow established operating and maintenance procedures.
+
+
+[TOPIC: Electrical Safety]
+
+Electrical equipment used in mines should be installed, operated, and maintained using appropriate safety procedures.
+
+Electrical hazards should be identified and workers should be protected against electric shock, fire, and other electrical risks.
+
+
+[TOPIC: Worker Protection]
+
+Workers should be protected from hazards associated with mining operations.
+
+Appropriate protective equipment, safety procedures, training, supervision, and hazard controls should be provided.
+
+
+[TOPIC: Emergency Procedures]
+
+Mines should maintain procedures for responding to emergencies.
+
+Emergency procedures may cover evacuation, communication, rescue operations, emergency equipment, and responsibilities of mine personnel.
+
+
+[TOPIC: Mine Inspections]
+
+Mining areas and safety systems should be inspected regularly.
+
+Inspections may cover ventilation, roof conditions, machinery, electrical equipment, working areas, and other safety-related conditions.
+
+
+[TOPIC: Safety Training]
+
+Workers should receive training appropriate to their duties.
+
+Training may include hazard identification, safe equipment operation, emergency procedures, personal protective equipment, and workplace safety practices.

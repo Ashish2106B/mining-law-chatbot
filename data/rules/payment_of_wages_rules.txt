@@ -1,73 +1,61 @@
-DOCUMENT TYPE: DEMONSTRATION DATA
-DOCUMENT NAME: Payment of Wages Rules
-STATUS: Synthetic content for chatbot development
-IMPORTANT: This is NOT the official text of Indian rules. It is only sample data for testing the chatbot.
+[TOPIC: Purpose and Scope]
 
-TITLE
-Payment of Wages Rules - Demonstration Document
+This demonstration document describes general concepts relating to payment of wages, wage records, deductions, attendance, and disputes involving workers.
 
-PURPOSE
-This demonstration document describes general concepts relating to payment of wages for workers.
+This is synthetic content for chatbot development and is not an official legal document.
 
-SCOPE
-The document covers:
-- wage records
-- payment procedures
-- deductions
-- wage statements
-- worker information
-- record maintenance
 
-WAGES
-Workers should receive wages according to the terms applicable to their employment.
+[TOPIC: Wages]
 
-Employers should maintain accurate information concerning wages payable to workers.
+Workers should receive wages for work performed according to applicable employment arrangements and requirements.
 
-WAGE RECORDS
-Records may contain:
-- worker identification
-- attendance
-- wages earned
-- deductions
-- net payment
-- date of payment
+Mining organizations should maintain appropriate information relating to wages payable to workers.
 
-PAYMENT
-Wages should be paid using an appropriate and documented payment procedure.
 
-Employers should maintain evidence of payments where required.
+[TOPIC: Payment of Wages]
 
-DEDUCTIONS
-Any deduction from wages should be made according to the applicable legal requirements.
+Wages should be paid according to the applicable payment schedule and established procedures.
 
-Examples of possible deductions may include deductions that are specifically permitted by applicable law.
+Employers should maintain records showing the amounts paid to workers.
 
-WAGE STATEMENTS
-Workers should receive appropriate information concerning wages and deductions where required.
 
-A wage statement may contain:
-- gross wages
-- deductions
-- net wages
-- payment date
+[TOPIC: Wage Records]
 
-ATTENDANCE
-Attendance and working time information may be maintained for calculating wages.
+Wage records may include worker identification, attendance information, wages earned, deductions, and the final amount paid.
 
-RECORD MAINTENANCE
-Employers should preserve wage-related records for the period required under the applicable rules.
+Records should be accurate and maintained systematically.
 
-DISPUTES
-Workers who believe that their wages have not been correctly calculated or paid may use the applicable grievance or legal procedure.
 
-KEY TOPICS
-wages
-payment of wages
-worker wages
-salary
-deductions
-wage records
-attendance
-payment records
-wage statement
-worker dispute
+[TOPIC: Deductions]
+
+Deductions from wages should be made only according to applicable requirements and authorized procedures.
+
+Details of deductions should be recorded so that workers can understand how the final wage amount was calculated.
+
+
+[TOPIC: Wage Statements]
+
+Workers may be provided information showing wages earned and deductions made.
+
+Clear wage information helps workers verify that their payments have been calculated correctly.
+
+
+[TOPIC: Attendance Records]
+
+Attendance records may be used to determine the number of days or hours worked by employees.
+
+Attendance information should be maintained accurately because it may be relevant to wage calculations.
+
+
+[TOPIC: Record Maintenance]
+
+Employers should maintain wage-related records for the required period.
+
+Records should be available when needed for inspection, verification, or resolution of wage-related issues.
+
+
+[TOPIC: Wage Disputes]
+
+Workers may raise concerns when they believe that wages have not been paid correctly.
+
+Organizations should maintain procedures for receiving and resolving wage-related complaints or disputes.
