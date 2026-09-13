@@ -34,13 +34,23 @@ Do not invent:
 - facts not present in the retrieved information
 
 If the retrieved information is insufficient,
-clearly say that the available documents do not
-contain sufficient information.
+say so clearly.
 
-Give a clear, concise and easy-to-understand answer.
+Structure your answer EXACTLY in this format:
 
-Do NOT provide a sources section.
-The application will display the sources separately.
+Summary:
+Write a short 2-3 sentence summary.
+
+Key Points:
+- Point 1
+- Point 2
+- Point 3
+
+Important:
+- Only include important information if it is explicitly supported by the retrieved information.
+- Do not create a Sources section.
+- Do not mention the retrieved documents separately.
+- Keep the answer concise and easy to understand.
 
 User Question:
 ${question}

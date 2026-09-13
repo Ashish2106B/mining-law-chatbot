@@ -16,7 +16,11 @@ function searchDocuments(query, chunks) {
 
         let score = 0;
 
-        // Match topic
+
+        // ==========================================
+        // MATCH TOPIC, TEXT AND DOCUMENT
+        // ==========================================
+
         for (const word of queryWords) {
 
             if (topic.includes(word)) {
@@ -32,8 +36,11 @@ function searchDocuments(query, chunks) {
             }
         }
 
-        // Strong match when the document name
-        // is explicitly mentioned
+
+        // ==========================================
+        // STRONG DOCUMENT MATCHES
+        // ==========================================
+
         if (
             lowerQuery.includes("coal mines act") &&
             document === "coal_mines_act.txt"
@@ -80,6 +87,7 @@ function searchDocuments(query, chunks) {
             lowerQuery.includes("rehabilitation") ||
             lowerQuery.includes("resettlement")
         ) {
+
             if (
                 document ===
                 "rehabilitation_resettlement.txt"
@@ -87,6 +95,11 @@ function searchDocuments(query, chunks) {
                 score += 10;
             }
         }
+
+
+        // ==========================================
+        // STORE RELEVANT RESULTS
+        // ==========================================
 
         if (score > 0) {
 
@@ -97,9 +110,22 @@ function searchDocuments(query, chunks) {
         }
     }
 
-    results.sort((a, b) => b.score - a.score);
+
+    // ==========================================
+    // SORT BY RELEVANCE
+    // ==========================================
+
+    results.sort(
+        (a, b) => b.score - a.score
+    );
+
+
+    // ==========================================
+    // RETURN TOP RESULTS
+    // ==========================================
 
     return results.slice(0, 5);
 }
+
 
 module.exports = searchDocuments;

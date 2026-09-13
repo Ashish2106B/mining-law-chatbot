@@ -22,7 +22,7 @@ console.log(
 );
 
 console.log(
-    chalk.bold.cyan("     MINING LAW CHATBOT")
+    chalk.bold.cyan("            MINING LAW CHATBOT")
 );
 
 console.log(
@@ -76,7 +76,6 @@ console.log(
     )
 );
 
-
 const chunks = chunkDocuments(documents);
 
 console.log(
@@ -102,6 +101,10 @@ const rl = readline.createInterface({
 });
 
 
+// ==========================================
+// ASK QUESTION
+// ==========================================
+
 function askQuestion() {
 
     rl.question(
@@ -116,7 +119,9 @@ function askQuestion() {
             // ==========================================
 
             if (!input) {
+
                 askQuestion();
+
                 return;
             }
 
@@ -130,7 +135,9 @@ function askQuestion() {
             );
 
             if (isCommand) {
+
                 askQuestion();
+
                 return;
             }
 
@@ -157,6 +164,7 @@ function askQuestion() {
                 console.log();
 
                 askQuestion();
+
                 return;
             }
 
@@ -177,15 +185,20 @@ function askQuestion() {
                 // NO RELEVANT INFORMATION
                 // ==========================================
 
-                if (results.length === 0) {
+                const MIN_RELEVANCE_SCORE = 5;
 
-                    console.log(
-                        chalk.yellow(
-                            "\n⚠ No relevant information found.\n"
-                        )
-                    );
+                    if (
+                        results.length === 0 ||
+                        results[0].score < MIN_RELEVANCE_SCORE
+                    ) {
 
-                } else {
+                        console.log(
+                            chalk.yellow(
+                                "\n⚠ No sufficiently relevant information found.\n"
+                            )
+                        );
+
+                    } else {
 
 
                     // ==========================================
@@ -206,7 +219,7 @@ function askQuestion() {
 
 
                     // ==========================================
-                    // GENERATE GEMINI ANSWER
+                    // GENERATE ANSWER
                     // ==========================================
 
                     const answer =
@@ -216,9 +229,29 @@ function askQuestion() {
                         );
 
 
+                    // ==========================================
+                    // DISPLAY ANSWER
+                    // ==========================================
+
                     console.log(
-                        chalk.bold.green("Bot:")
+                        chalk.cyan(
+                            "┌──────────────────────────────────────────┐"
+                        )
                     );
+
+                    console.log(
+                        chalk.bold.cyan(
+                            "│                  ANSWER                  │"
+                        )
+                    );
+
+                    console.log(
+                        chalk.cyan(
+                            "└──────────────────────────────────────────┘"
+                        )
+                    );
+
+                    console.log();
 
                     console.log(
                         chalk.white(answer)
@@ -229,9 +262,27 @@ function askQuestion() {
                     // DISPLAY SOURCES
                     // ==========================================
 
+                    console.log();
+
                     console.log(
-                        chalk.bold.cyan("\nSources:")
+                        chalk.cyan(
+                            "┌──────────────────────────────────────────┐"
+                        )
                     );
+
+                    console.log(
+                        chalk.bold.cyan(
+                            "│                 SOURCES                  │"
+                        )
+                    );
+
+                    console.log(
+                        chalk.cyan(
+                            "└──────────────────────────────────────────┘"
+                        )
+                    );
+
+                    console.log();
 
 
                     const uniqueSources = [
@@ -244,19 +295,35 @@ function askQuestion() {
                     ];
 
 
-                    for (const source of uniqueSources) {
+                    uniqueSources.forEach(
+                        (source, index) => {
 
-                        console.log(
-                            chalk.gray(
-                                `  • ${source}`
-                            )
-                        );
-                    }
+                            console.log(
+                                chalk.gray(
+                                    `  ${index + 1}. ${source}`
+                                )
+                            );
+
+                        }
+                    );
+
+
+                    console.log();
+
+                    console.log(
+                        chalk.gray(
+                            "────────────────────────────────────────────"
+                        )
+                    );
 
                     console.log();
                 }
 
             } catch (error) {
+
+                // ==========================================
+                // ERROR HANDLING
+                // ==========================================
 
                 console.log(
                     chalk.red(
@@ -272,7 +339,9 @@ function askQuestion() {
             }
 
 
-            // Ask another question
+            // ==========================================
+            // ASK NEXT QUESTION
+            // ==========================================
 
             askQuestion();
         }
