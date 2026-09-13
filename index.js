@@ -131,7 +131,9 @@ function askQuestion() {
             // ==========================================
 
             const isCommand = handleCommand(
-                input.toLowerCase()
+                input.toLowerCase(),
+                documents,
+                chunks
             );
 
             if (isCommand) {
