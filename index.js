@@ -3,12 +3,17 @@ require("dotenv").config();
 const readline = require("readline");
 const chalk = require("chalk");
 
-const handleConversation = require("./src/conversation");
 const handleCommand = require("./src/commands");
+const handleConversation = require("./src/conversation");
 const loadDocuments = require("./src/documentLoader");
 const chunkDocuments = require("./src/chunkDocuments");
 const searchDocuments = require("./src/searchDocuments");
 const generateAnswer = require("./src/chatbot");
+
+
+// ==========================================
+// STARTUP
+// ==========================================
 
 console.clear();
 
@@ -25,47 +30,71 @@ console.log(
 );
 
 console.log(
-    chalk.white("\nWelcome to the Mining Law Chatbot!")
+    chalk.bold.green("\nHello! 👋")
 );
 
 console.log(
-    chalk.gray(
-        "Ask questions related to mining Acts, Rules, and Regulations."
+    chalk.white(
+        "Welcome to the Mining Law Chatbot."
     )
 );
 
 console.log(
-    chalk.gray("Type 'help' to see available commands.")
+    chalk.gray(
+        "Ask me questions about mining Acts, Rules, Regulations,"
+    )
 );
 
 console.log(
-    chalk.gray("Type 'exit' to quit.\n")
+    chalk.gray(
+        "DGMS Circulars, and land-related laws."
+    )
+);
+
+console.log(
+    chalk.gray(
+        "Type 'help' to see available commands."
+    )
+);
+
+console.log(
+    chalk.gray(
+        "Type 'exit' to quit.\n"
+    )
 );
 
 
-// Load documents
+// ==========================================
+// LOAD KNOWLEDGE BASE
+// ==========================================
 
 const documents = loadDocuments();
 
 console.log(
-    chalk.green(`✓ Loaded ${documents.length} documents.`)
+    chalk.green(
+        `✓ Loaded ${documents.length} documents.`
+    )
 );
 
-
-// Create chunks
 
 const chunks = chunkDocuments(documents);
 
 console.log(
-    chalk.green(`✓ Created ${chunks.length} predefined chunks.`)
+    chalk.green(
+        `✓ Created ${chunks.length} predefined chunks.`
+    )
 );
 
 console.log(
-    chalk.green("\n✓ Knowledge base ready.\n")
+    chalk.green(
+        "\n✓ Knowledge base ready.\n"
+    )
 );
 
 
-// Terminal interface
+// ==========================================
+// TERMINAL INTERFACE
+// ==========================================
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -81,7 +110,10 @@ function askQuestion() {
 
             input = input.trim();
 
-            // Ignore empty input
+
+            // ==========================================
+            // EMPTY INPUT
+            // ==========================================
 
             if (!input) {
                 askQuestion();
@@ -89,7 +121,9 @@ function askQuestion() {
             }
 
 
-            // Handle commands
+            // ==========================================
+            // HANDLE COMMANDS
+            // ==========================================
 
             const isCommand = handleCommand(
                 input.toLowerCase()
@@ -100,18 +134,24 @@ function askQuestion() {
                 return;
             }
 
-            // Handle normal conversation
 
-            const conversationResponse = handleConversation(input);
+            // ==========================================
+            // HANDLE NORMAL CONVERSATION
+            // ==========================================
+
+            const conversationResponse =
+                handleConversation(input);
 
             if (conversationResponse) {
 
                 console.log(
-                    chalk.bold.green("Bot:")
+                    chalk.bold.green("\nBot:")
                 );
 
                 console.log(
-                    chalk.white(conversationResponse)
+                    chalk.white(
+                        conversationResponse
+                    )
                 );
 
                 console.log();
@@ -121,6 +161,10 @@ function askQuestion() {
             }
 
 
+            // ==========================================
+            // SEARCH KNOWLEDGE BASE
+            // ==========================================
+
             try {
 
                 const results = searchDocuments(
@@ -129,7 +173,9 @@ function askQuestion() {
                 );
 
 
-                // No results
+                // ==========================================
+                // NO RELEVANT INFORMATION
+                // ==========================================
 
                 if (results.length === 0) {
 
@@ -140,6 +186,11 @@ function askQuestion() {
                     );
 
                 } else {
+
+
+                    // ==========================================
+                    // RETRIEVAL SUCCESS
+                    // ==========================================
 
                     console.log(
                         chalk.gray(
@@ -154,10 +205,15 @@ function askQuestion() {
                     );
 
 
-                    const answer = await generateAnswer(
-                        input,
-                        results
-                    );
+                    // ==========================================
+                    // GENERATE GEMINI ANSWER
+                    // ==========================================
+
+                    const answer =
+                        await generateAnswer(
+                            input,
+                            results
+                        );
 
 
                     console.log(
@@ -167,6 +223,35 @@ function askQuestion() {
                     console.log(
                         chalk.white(answer)
                     );
+
+
+                    // ==========================================
+                    // DISPLAY SOURCES
+                    // ==========================================
+
+                    console.log(
+                        chalk.bold.cyan("\nSources:")
+                    );
+
+
+                    const uniqueSources = [
+                        ...new Set(
+                            results.map(
+                                result =>
+                                    result.chunk.documentName
+                            )
+                        )
+                    ];
+
+
+                    for (const source of uniqueSources) {
+
+                        console.log(
+                            chalk.gray(
+                                `  • ${source}`
+                            )
+                        );
+                    }
 
                     console.log();
                 }
@@ -184,9 +269,10 @@ function askQuestion() {
                         "Please check your Gemini API connection.\n"
                     )
                 );
-
             }
 
+
+            // Ask another question
 
             askQuestion();
         }
@@ -194,7 +280,9 @@ function askQuestion() {
 }
 
 
-// Handle Ctrl+C
+// ==========================================
+// HANDLE CTRL + C
+// ==========================================
 
 rl.on("SIGINT", () => {
 
@@ -209,5 +297,9 @@ rl.on("SIGINT", () => {
     process.exit(0);
 });
 
+
+// ==========================================
+// START CHATBOT
+// ==========================================
 
 askQuestion();

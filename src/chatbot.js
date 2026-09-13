@@ -28,18 +28,19 @@ retrieved information provided below.
 Do not invent:
 - laws
 - sections
-- rules
 - penalties
 - dates
 - legal requirements
+- facts not present in the retrieved information
 
 If the retrieved information is insufficient,
-say that the available documents do not contain
-sufficient information to answer the question.
+clearly say that the available documents do not
+contain sufficient information.
 
-Give a clear and concise answer.
+Give a clear, concise and easy-to-understand answer.
 
-At the end, provide the source documents used.
+Do NOT provide a sources section.
+The application will display the sources separately.
 
 User Question:
 ${question}
