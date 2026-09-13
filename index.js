@@ -3,6 +3,7 @@ require("dotenv").config();
 const readline = require("readline");
 const chalk = require("chalk");
 
+const handleConversation = require("./src/conversation");
 const handleCommand = require("./src/commands");
 const loadDocuments = require("./src/documentLoader");
 const chunkDocuments = require("./src/chunkDocuments");
@@ -95,6 +96,26 @@ function askQuestion() {
             );
 
             if (isCommand) {
+                askQuestion();
+                return;
+            }
+
+            // Handle normal conversation
+
+            const conversationResponse = handleConversation(input);
+
+            if (conversationResponse) {
+
+                console.log(
+                    chalk.bold.green("Bot:")
+                );
+
+                console.log(
+                    chalk.white(conversationResponse)
+                );
+
+                console.log();
+
                 askQuestion();
                 return;
             }
